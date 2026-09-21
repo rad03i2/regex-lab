@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "regex-lab"
+version = "1.0.0"
+description = "A local CLI workbench for testing, inspecting, and transforming text with Python regular expressions."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Radwan Abdulhadi Ahmed"}]
+dependencies = []
+
+[project.scripts]
+regex-lab = "regex_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
